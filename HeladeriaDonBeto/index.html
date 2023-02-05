@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Heladería Don Beto</title>
+</head>
+<body>
+    <header>
+        <h1>Heladería Don Beto</h1>
+    </header>
+        <form id="myForm">
+            <table>
+                <tr>
+                    <td>
+                        <h4> Bienvenido a Heladería Don Beto</h4><br>
+                        <label for="producto">¿Qué producto comprará?</label>
+                        <input type="radio" id="productoHelado" name="producto" value="helado">
+                        <label for="productoHelado">Helado</label>
+                        <input type="radio" id="productoNieve" name="producto" value="nieve">
+                        <label for="productoNieve">Nieve</label>
+                        <input type="radio" id="productoPaleta" name="producto" value="paleta">
+                        <label for="productoPaleta">Paleta</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="presentacion">¿En qué presentación?</label>
+                        <input type="radio" id="presentacionCono" name="presentacion" value="cono">
+                        <label for="presentacionCono">Cono</label>
+                        <input type="radio" id="presentacionVaso" name="presentacion" value="vaso">
+                        <label for="presentacionVaso">Vaso</label>
+                        <input type="radio" id="presentacionBote" name="presentacion" value="bote">
+                        <label for="presentacionBote">Bote</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="saborHelado">¿De qué sabor #Helado?</label>
+                        <label for="heladoNormal">Normal:</label>
+                        <select id="heladoNormal" name="heladoNormal">
+                            <option value="ninguno">Seleccionar sabor</option>
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="Fresa">Fresa</option>
+                            <option value="Vainilla">Vainilla</option>
+                            <option value="Napolitano">Napolitano</option>
+                        </select>
+                        &nbsp;&nbsp;
+                        <label for="heladoPremium">Premium:</label>
+                        <select id="heladoPremium" name="heladoPremium">
+                            <option value="ninguno">Seleccionar sabor</option>
+                            <option value="Beso de ángel">Beso de ángel</option>
+                            <option value="Queso con zarzamora">Queso con zarzamora</option>
+                            <option value="Fresas con crema">Fresas con crema</option>
+                            <option value="Pistache">Pistache</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="complementoHelado">¿Con qué complemento?</label>
+                        <input type="radio" id="complementoHeladoNinguno" name="complementoHelado" value="ninguno">
+                        <label for="complementoHeladoNinguno">Ninguno</label>
+                        <input type="radio" id="complementoHeladoMermelada" name="complementoHelado" value="mermelada">
+                        <label for="complementoHeladoMermelada">Mermelada</label>
+                        <input type="radio" id="complementoHeladoHershey" name="complementoHelado" value="syrup hershey's">
+                        <label for="complementoHeladoHershey">Syrup Hershey's</label>
+                        <input type="radio" id="complementoHeladoChispas" name="complementoHelado" value="chispas">
+                        <label for="complementoHeladoChispas">Chispas</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="saborNieve">¿De que sabor #Nieve?</label>
+                        <input type="radio" id="saborNieveLimon" name="saborNieve" value="limon">
+                        <label for="saborNieveLimon">Limón</label>
+                        <input type="radio" id="saborNieveMango" name="saborNieve" value="mango">
+                        <label for="saborNieveMango">Mango</label>
+                        <input type="radio" id="saborNieveGrosella" name="saborNieve" value="grosella">
+                        <label for="saborNieveGrosella">Grosella</label>
+                        <input type="radio" id="saborNievePinia" name="saborNieve" value="pinia">
+                        <label for="saborNievePinia">Piña</label>
+                        <input type="radio" id="saborNieveMelon" name="saborNieve" value="melon">
+                        <label for="saborNieveMelon">Melón</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="complementoNieve">¿Con qué complemento?</label>
+                        <input type="radio" id="complementoNieveNinguno" name="complementoNieve" value="ninguno">
+                        <label for="complementoNieveNinguno">Ninguno</label>
+                        <input type="radio" id="complementoNieveMiguelito" name="complementoNieve" value="miguelito">
+                        <label for="complementoNieveMiguelito">Miguelito</label>
+                        <input type="radio" id="complementoNieveTajin" name="complementoNieve" value="tajin">
+                        <label for="complementoNieveTajin">Tajín</label>
+                        <input type="radio" id="complementoNieveChamoy" name="complementoNieve" value="chamoy">
+                        <label for="complementoNieveChamoy">Chamoy</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="saborPaleta">¿De qué sabor #Paleta?</label>
+                        <label for="paletaAgua">Agua:</label>
+                        <select id="paletaAgua" name="paletaAgua">
+                            <option value="ninguno">Seleccionar sabor</option>
+                            <option value="Limón">Limón</option>
+                            <option value="Grosella">Grosella</option>
+                            <option value="Mango">Mango</option>
+                            <option value="Chicle">Chicle</option>
+                            <option value="Fresa">Fresa</option>
+                        </select>
+                        &nbsp;&nbsp;
+                        <label for="paletaCrema">Crema:</label>
+                        <select id="paletaCrema" name="paletaCrema">
+                            <option value="ninguno">Seleccionar sabor</option>
+                            <option value="Oreo">Oreo</option>
+                            <option value="Arroz con leche">Arroz con leche</option>
+                            <option value="Fresas con crema">Fresas con crema</option>
+                            <option value="Nuez">Nuez</option>
+                            <option value="Pistache">Pistache</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="complementoPaleta">¿Con qué complemento?</label>
+                        <input type="radio" id="complementoPaletaNinguno" name="complementoPaleta" value="ninguno">
+                        <label for="complementoPaletaNinguno">Ninguno</label>
+                        <input type="radio" id="complementoPaletaChocolate" name="complementoPaleta" value="chocolate liquido">
+                        <label for="complementoPaletaChocolate">Chocolate líquido</label>
+                        <input type="radio" id="complementoPaletaChamoy" name="complementoPaleta" value="chamoy">
+                        <label for="complementoPaletaChamoy">Chamoy</label>
+                        <input type="radio" id="complementoPaletaMiguelito" name="complementoPaleta" value="miguelito">
+                        <label for="complementoPaletaMiguelito">Miguelito</label>
+                        <input type="radio" id="complementoPaletaTajin" name="complementoPaleta" value="tajin">
+                        <label for="complementoPaletaTajin">Tajín</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Total:</label>
+                        <input type="text" id="total" disabled>
+                    </td>
+                </tr>
+            </table>
+            <button id="exportBtn">Exportar a CSV</button>
+        </form>
+</body>
+<script>
+    document.getElementById("exportBtn").addEventListener("click", function() {
+    const formData = new FormData(document.getElementById("myForm"));
+    let csv = "";
+    for (const [key, value] of formData.entries()) {
+    if (key === "producto") {
+        csv += `"${key}","${
+            document.querySelector(`input[name="${key}"]:checked`).value
+        }"\n`;
+    } else if (key === "presentacion") {
+        csv += `"${key}","${
+            document.querySelector(`input[name="${key}"]:checked`).value
+        }"\n`;
+    } else if (key === "heladoNormal") {
+        csv += `"${key}","${
+            document.getElementById(key).options[
+                document.getElementById(key).selectedIndex
+            ].text
+        }"\n`;
+    } else if (key === "heladoPremium") {
+        csv += `"${key}","${
+            document.getElementById(key).options[
+                document.getElementById(key).selectedIndex
+            ].text
+        }"\n`;
+    } else if (key === "complementoHelado") {
+        csv += `"${key}","${
+            document.querySelector(`input[name="${key}"]:checked`).value
+        }"\n`;
+    } else if (key === "saborNieve") {
+        csv += `"${key}","${
+            document.querySelector(`input[name="${key}"]:checked`).value
+        }"\n`;
+    } else if (key === "complementoNieve") {
+        csv += `"${key}","${
+            document.querySelector(`input[name="${key}"]:checked`).value
+        }"\n`;
+    } else if (key === "paletaAgua") {
+        csv += `"${key}","${
+            document.getElementById(key).options[
+                document.getElementById(key).selectedIndex
+            ].text
+        }"\n`;
+    } else if (key === "paletaCrema") {
+        csv += `"${key}","${
+            document.getElementById(key).options[
+                document.getElementById(key).selectedIndex
+            ].text
+        }"\n`;
+    } else if (key === "complementoPaleta") {
+        csv += `"${key}","${
+            document.querySelector(`input[name="${key}"]:checked`).value
+        }"\n`;
+    } else {
+            csv += `"${key}","${value}"\n`;
+        }
+    }
+    const oldCsv = localStorage.getItem("formulario") || "";
+    localStorage.setItem("formulario", oldCsv + csv);
+    const blob = new Blob([oldCsv + csv], { type: "text/csv;charset=utf-8;" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "formulario.csv";
+    link.click();
+    });
+</script>
+</html>

@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Exportar formulario a CSV</title>
+  </head>
+  <body>
+    <h1>Formulario</h1>
+    <form id="myForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+      <br><br>
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" name="apellido">
+      <br><br>
+      <label for="genero">Género:</label>
+      <input type="radio" id="generoHombre" name="genero" value="hombre">
+      <label for="generoHombre">Hombre</label>
+      <input type="radio" id="generoMujer" name="genero" value="mujer">
+      <label for="generoMujer">Mujer</label>
+      <br><br>
+      <label for="pais">País:</label>
+      <select id="pais" name="pais">
+        <option value="">Seleccionar país</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brasil">Brasil</option>
+        <option value="Chile">Chile</option>
+        <option value="Colombia">Colombia</option>
+      </select>
+      <br><br>
+      <button id="exportBtn">Exportar a CSV</button>
+    </form>
+    <script>
+      document.getElementById("exportBtn").addEventListener("click", function() {
+        const formData = new FormData(document.getElementById("myForm"));
+        let csv = "";
+        for (const [key, value] of formData.entries()) {
+          if (key === "genero") {
+            csv += `"${key}","${
+              document.querySelector(`input[name="${key}"]:checked`).value
+            }"\n`;
+          } else if (key === "pais") {
+            csv += `"${key}","${
+              document.getElementById(key).options[
+                document.getElementById(key).selectedIndex
+              ].text
+            }"\n`;
+          } else {
+            csv += `"${key}","${value}"\n`;
+          }
+        }
+        const oldCsv = localStorage.getItem("formulario") || "";
+        localStorage.setItem("formulario", oldCsv + csv);
+        const blob = new Blob([oldCsv + csv], { type: "text/csv;charset=utf-8;" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "formulario.csv";
+        link.click();
+      });
+    </script>
+  </body>
+</html>
